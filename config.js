@@ -1,7 +1,7 @@
 export const accounts = [
     {
         username: "FREE",
-        password: " ",
+        password: "FREE",
         hasMembership: false
     },
     {
