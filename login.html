@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Classroom Bypasser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="classroom.png" alt="Logo" width="30" height="30">
+            <span>Classroom Bypasser</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="download.html" id="download-link" style="display: none;">DOWNLOAD</a>
+            <a href="login.html" class="active" id="login-nav">Login</a>
+        </div>
+        <div class="auth-section">
+            <div id="login-status"></div>
+        </div>
+    </nav>
+
+    <div class="login-page">
+        <div class="login-container animated fadeIn" id="login-form">
+            <h2>Welcome Back!</h2>
+            <p class="login-desc">Access your premium bypasser features</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div id="login-error" class="error-message"></div>
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+            <div class="login-info">
+                <p>Don't have an account yet? Contact our support team to get started.</p>
+                <!-- Removed demo accounts info -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
