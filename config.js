@@ -1,12 +1,22 @@
 export const accounts = [
     {
-        username: "admin",
-        password: "admin",
+        username: "DEMO",
+        password: "",
         hasMembership: false
     },
     {
-        username: "admin2",
-        password: "admin2",
+        username: "Nikeraider",
+        password: "JoBiden!JoBiden!",
+        hasMembership: true
+    },
+    {
+        username: "JurizzDss",
+        password: "!_@BootyHunt@_!",
+        hasMembership: true
+    },
+    {
+        username: "BobertBobertson",
+        password: "ILikeKFC&McRonald12",
         hasMembership: true
     }
 ];
