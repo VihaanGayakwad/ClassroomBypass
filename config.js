@@ -2,7 +2,7 @@ export const accounts = [
     {
         username: "FREE",
         password: "FREE",
-        hasMembership: true
+        hasMembership: false
     },
     {
         username: "Nikeraider",
