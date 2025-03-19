@@ -48,6 +48,26 @@ function updateUI() {
     }
 }
 
+function copyPassword() {
+    const passwordText = document.getElementById('password-text').innerText;
+    
+    // Create a temporary input element to hold the password
+    const tempInput = document.createElement('input');
+    tempInput.value = passwordText;
+    document.body.appendChild(tempInput);
+    
+    // Select and copy the text
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+    
+    // Remove the temporary input
+    document.body.removeChild(tempInput);
+    
+    // Provide user feedback
+    alert('Password copied to clipboard!');
+}
+
 window.logout = function() {
     currentUser = null;
     localStorage.removeItem('currentUser');
