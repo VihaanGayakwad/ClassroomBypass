@@ -57,34 +57,7 @@
                 <div class="download-button-container">
                     <a href="CB.pdf" download class="download-button">DOWNLOAD NOW</a>
                 </div>
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
-
-const CopyCodeButton = () => {
-  const handleCopy = () => {
-    navigator.clipboard.writeText('The password is Q8w@pL3z!D7sH9bM');
-    alert('Code copied to clipboard!');
-  };
-
-  return (
-    <div className='flex flex-col items-center justify-center h-screen'>
-      <p className='mb-4 text-lg'>
-        The password is <b>Q8w@pL3z!D7sH9bM</b>
-      </p>
-      <Button
-        className='bg-orange-500 text-white px-4 py-2 rounded-xl shadow-md hover:bg-orange-600 transition-all'
-        onClick={handleCopy}
-      >
-        Copy to Clipboard
-      </Button>
-    </div>
-  );
-};
-
-export default CopyCodeButton;
-
-                 
+                 <p>The password is <b>Q8w@pL3z!D7sH9bM</b></p>
             </div>
         </div>
     </div>
