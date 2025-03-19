@@ -247,6 +247,26 @@ nav {
     color: var(--primary-color);
 }
 
+.copy-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.copy-button:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+.copy-button:active {
+    transform: scale(0.95);
+}
+
 .features {
     padding: 80px 20px;
     text-align: center;
