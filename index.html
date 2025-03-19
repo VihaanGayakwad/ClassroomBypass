@@ -1,63 +1,78 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="applefavicon.png">
-    <!-- Other -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classroom Bypasser</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom Bypasser</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="applefavicon.png">
+
+  <script>
+    // Check if URL has ?bobertaccess=true
+    const params = new URLSearchParams(window.location.search);
+    const hasAccess = params.get("bobertaccess") === "true";
+
+    if (!hasAccess) {
+      // Redirect if access parameter is missing or incorrect
+      window.location.href = "https://eglc-mttools.github.io/unauthorized/";
+    } else {
+      // Remove the query parameter from the URL without reloading the page
+      const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.replaceState({}, document.title, cleanUrl);
+    }
+  </script>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <img src="classroom.png" alt="Logo" width="30" height="30">
-            <span>Classroom Bypasser</span>
-        </div>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="download.html" id="download-link" style="display: none;">Download</a>
-            <a href="login.html" id="login-nav">Login</a>
-        </div>
-        <div class="auth-section">
-            <div id="login-status"></div>
-        </div>
-    </nav>
-
-    <div class="hero">
-        <div class="hero-content">
-            <h1 class="animated fadeIn">Your Ultimate Classroom Solution</h1>
-            <p class="animated fadeIn delay-1">Experience seamless classroom management with our advanced bypassing technology.</p>
-            <div class="cta-buttons animated fadeIn delay-2">
-                <a href="pricing.html" class="cta-button">View Pricing</a>
-                <a href="login.html" class="cta-button secondary">Login</a>
-            </div>
-        </div>
+  <nav>
+    <div class="logo">
+      <img src="classroom.png" alt="Logo" width="30" height="30">
+      <span>Classroom Bypasser</span>
     </div>
-
-    <div class="features">
-        <h2 class="section-title animated fadeIn">Why Choose Classroom Bypasser?</h2>
-        <div class="feature-grid">
-            <div class="feature-card animated fadeIn delay-1">
-                <div class="feature-icon">🔐</div>
-                <h3>Advanced Security</h3>
-                <p>Our bypass techniques are undetectable and regularly updated to ensure maximum security.</p>
-            </div>
-            <div class="feature-card animated fadeIn delay-2">
-                <div class="feature-icon">⚡</div>
-                <h3>Lightning Fast</h3>
-                <p>Access all your classroom resources with zero delay. No more waiting for approvals.</p>
-            </div>
-            <div class="feature-card animated fadeIn delay-3">
-                <div class="feature-icon">🔄</div>
-                <h3>Constant Updates</h3>
-                <p>We regularly update our system to adapt to any classroom security changes.</p>
-            </div>
-        </div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="download.html" id="download-link" style="display: none;">Download</a>
+      <a href="login.html" id="login-nav">Login</a>
     </div>
+    <div class="auth-section">
+      <div id="login-status"></div>
+    </div>
+  </nav>
 
-    <script type="module" src="script.js"></script>
+  <div class="hero">
+    <div class="hero-content">
+      <h1 class="animated fadeIn">Your Ultimate Classroom Solution</h1>
+      <p class="animated fadeIn delay-1">Experience seamless classroom management with our advanced bypassing technology.</p>
+      <div class="cta-buttons animated fadeIn delay-2">
+        <a href="pricing.html" class="cta-button">View Pricing</a>
+        <a href="login.html" class="cta-button secondary">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <h2 class="section-title animated fadeIn">Why Choose Classroom Bypasser?</h2>
+    <div class="feature-grid">
+      <div class="feature-card animated fadeIn delay-1">
+        <div class="feature-icon">🔐</div>
+        <h3>Advanced Security</h3>
+        <p>Our bypass techniques are undetectable and regularly updated to ensure maximum security.</p>
+      </div>
+      <div class="feature-card animated fadeIn delay-2">
+        <div class="feature-icon">⚡</div>
+        <h3>Lightning Fast</h3>
+        <p>Access all your classroom resources with zero delay. No more waiting for approvals.</p>
+      </div>
+      <div class="feature-card animated fadeIn delay-3">
+        <div class="feature-icon">🔄</div>
+        <h3>Constant Updates</h3>
+        <p>We regularly update our system to adapt to any classroom security changes.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
