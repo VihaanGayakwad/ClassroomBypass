@@ -10,7 +10,7 @@ function checkLoginStatus() {
     }
     
     // Check if on download page and redirect if no membership
-    if (window.location.pathname.includes('download.html')) {
+    if (window.location.pathname.includes('download') || window.location.pathname.includes('download.html')) {
         if (!currentUser || !currentUser.hasMembership) {
             window.location.href = 'https://vihaangayakwad.github.io/ClassroomBypass/?bobertaccess=true/';
         }
@@ -52,7 +52,7 @@ window.logout = function() {
     currentUser = null;
     localStorage.removeItem('currentUser');
     updateUI();
-    if (window.location.pathname.includes('download.html')) {
+    if (window.location.pathname.includes('download') || window.location.pathname.includes('download.html')) {
         window.location.href = 'https://vihaangayakwad.github.io/ClassroomBypass/?bobertaccess=true/';
     }
 }
