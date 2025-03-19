@@ -11,6 +11,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <script>
+        // Function to remove .html from the URL
+        function removeHtmlExtension() {
+            // Get the current URL path
+            const path = window.location.pathname;
+
+            // Check if the path ends with .html
+            if (path.endsWith('.html')) {
+                // Remove the .html extension from the path
+                const newPath = path.replace('.html', '');
+
+                // Replace the current URL with the new one (without .html)
+                history.replaceState(null, '', newPath);
+            }
+        }
+
+        // Call the function to remove .html on page load
+        removeHtmlExtension();
+    </script>
+     
     <nav>
         <div class="logo">
             <img src="classroom.png" alt="Logo" width="30" height="30">
