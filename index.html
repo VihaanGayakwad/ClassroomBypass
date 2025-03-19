@@ -10,9 +10,15 @@
   <link rel="apple-touch-icon" href="applefavicon.png">
 
   <script>
-    // Check if URL has ?bobertaccess=true
+    // Check if URL has ?bobertaccess=true (allowing for trailing slash)
     const params = new URLSearchParams(window.location.search);
-    const hasAccess = params.get("bobertaccess") === "true";
+    let accessParam = params.get("bobertaccess");
+    if (accessParam) {
+      // Remove trailing slashes (if any)
+      accessParam = accessParam.replace(/\/+$/, "");
+    }
+    
+    const hasAccess = accessParam === "true";
 
     if (!hasAccess) {
       // Redirect if access parameter is missing or incorrect
@@ -31,7 +37,7 @@
       <span>Classroom Bypasser</span>
     </div>
     <div class="nav-links">
-      <a href="https://vihaangayakwad.github.io/ClassroomBypass/?bobertaccess=true" class="active">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="pricing.html">Pricing</a>
       <a href="download.html" id="download-link" style="display: none;">Download</a>
       <a href="login.html" id="login-nav">Login</a>
