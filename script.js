@@ -12,7 +12,7 @@ function checkLoginStatus() {
     // Check if on download page and redirect if no membership
     if (window.location.pathname.includes('download') || window.location.pathname.includes('download.html')) {
         if (!currentUser || !currentUser.hasMembership) {
-            window.location.href = 'https://vihaangayakwad.github.io/ClassroomBypass/?bobertaccess=true/';
+            window.location.href = 'https://vihaangayakwad.github.io/ClassroomBypass/?bBEdNwIMiCJqXKOAkLpqlAFCGPbkJQdWJYvKRAHysHtNYSFpWyjFGwwRHtZXZJzFczlpeHzZJGNiFyLvRXmtSYcZCPiCXJOYBchxSAlZIFWSNiCAfUWhDOrakMr=true/';
         }
     }
 }
@@ -53,7 +53,7 @@ window.logout = function() {
     localStorage.removeItem('currentUser');
     updateUI();
     if (window.location.pathname.includes('download') || window.location.pathname.includes('download.html')) {
-        window.location.href = 'https://vihaangayakwad.github.io/ClassroomBypass/?bobertaccess=true/';
+        window.location.href = 'https://vihaangayakwad.github.io/ClassroomBypass/?bBEdNwIMiCJqXKOAkLpqlAFCGPbkJQdWJYvKRAHysHtNYSFpWyjFGwwRHtZXZJzFczlpeHzZJGNiFyLvRXmtSYcZCPiCXJOYBchxSAlZIFWSNiCAfUWhDOrakMr=true/';
     }
 }
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentUser = user;
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 updateUI();
-                window.location.href = 'https://vihaangayakwad.github.io/ClassroomBypass/?bobertaccess=true/';
+                window.location.href = 'https://vihaangayakwad.github.io/ClassroomBypass/?bBEdNwIMiCJqXKOAkLpqlAFCGPbkJQdWJYvKRAHysHtNYSFpWyjFGwwRHtZXZJzFczlpeHzZJGNiFyLvRXmtSYcZCPiCXJOYBchxSAlZIFWSNiCAfUWhDOrakMr=true/';
             } else {
                 loginError.textContent = 'Invalid credentials';
                 loginAttemptAllowed = false;
